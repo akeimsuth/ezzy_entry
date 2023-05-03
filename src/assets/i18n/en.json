@@ -9,6 +9,8 @@
     "facebook": "Facebook",
     "google": "Google",
     "ok": "Ok",
+    "password":"Password",
+    "enter_password": "Enter Password",
     "cancel": "Cancel",
     "you_are_not_registered_yet": "You're not registered yet",
     "sign_up_now": "Sign up Now",
