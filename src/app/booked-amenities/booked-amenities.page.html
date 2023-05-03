@@ -1,0 +1,135 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+    <div class="header_text">
+        <h1 class="animate__animated animate__fadeInUp d-flex">
+            {{"booked_amenities" | translate}}
+        </h1>
+    </div>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <ion-list lines="none">
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <div class="itemHeader">
+                    <div class="d-flex ion-align-items-start">
+                        <div class="text_box">
+                            <h2 class="d-flex">
+                                <strong>Community Hall</strong>
+                            </h2>
+                        </div>
+                        <div class="status end confirmed">
+                            <h4>{{"confirmed" | translate}}</h4>
+                        </div>
+                    </div>
+                    <h3>20 Aug 2022 - 23 Aug 2022 <span>|</span> 12:00am - 11:59pm</h3>
+                </div>
+
+                <div class="itemContent">
+                    <h3 class="d-flex">
+                        <span>{{"confirmed_by" | translate}}</span> &nbsp;
+                        <strong>Jessica Taylor</strong>
+                        <span class="end">22 Aug, 03:30 pm</span>
+                    </h3>
+                </div>
+
+                <div class="itemFooter">
+                    <h3 class="d-flex">
+                        <strong>
+              <ion-icon class="zmdi zmdi-shield-check"></ion-icon>
+              {{"paid_via" | translate}} Debit Card
+            </strong>
+                        <span class="end">
+              $60.00
+            </span>
+                    </h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <div class="itemHeader">
+                    <div class="d-flex ion-align-items-start">
+                        <div class="text_box">
+                            <h2 class="d-flex">
+                                <strong>Club house</strong>
+                            </h2>
+                        </div>
+                        <div class="status end pending">
+                            <h4>{{"pending" | translate}}</h4>
+                        </div>
+                    </div>
+                    <h3>20 Aug 2022 - 23 Aug 2022 <span>|</span> 12:00am - 11:59pm</h3>
+                </div>
+
+                <div class="itemContent">
+                    <h3 class="d-flex">
+                        <span>{{"booked_by" | translate}}</span> &nbsp;
+                        <strong>George Haydon</strong>
+                        <span class="end">18 Aug, 01:30 pm</span>
+                    </h3>
+                </div>
+
+                <div class="itemFooter">
+                    <h3 class="d-flex">
+                        <strong>
+              <ion-icon class="zmdi zmdi-shield-check"></ion-icon>
+              {{"no_payment" | translate}}
+            </strong>
+                        <span class="end">
+              {{"free" | translate}}
+            </span>
+                    </h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <div class="itemHeader">
+                    <div class="d-flex ion-align-items-start">
+                        <div class="text_box">
+                            <h2 class="d-flex">
+                                <strong>Community Hall</strong>
+                            </h2>
+
+                        </div>
+                        <div class="status end canceled">
+                            <h4>{{"canceled" | translate}}</h4>
+                        </div>
+                    </div>
+                    <h3>20 Aug 2022 - 23 Aug 2022 <span>|</span> 12:00am - 11:59pm</h3>
+                </div>
+
+                <div class="itemContent">
+                    <h3 class="d-flex">
+                        <span>{{"canceled_by" | translate}}</span> &nbsp;
+                        <strong>Admin</strong>
+                        <span class="end">05 Aug, 04:50 pm</span>
+                    </h3>
+                </div>
+
+                <div class="itemFooter">
+                    <h3 class="d-flex">
+                        <strong>
+              <ion-icon class="zmdi zmdi-shield-check"></ion-icon>
+              {{"no_payment" | translate}}  
+            </strong>
+                        <span class="end">
+              {{"free" | translate}}
+            </span>
+                    </h3>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+    <ion-fab class="animate__animated animate__zoomIn" vertical="bottom" horizontal="center" slot="fixed" (click)="selectAmenity()">
+        <h2> <span>+ {{"book_amenity" | translate}}</span></h2>
+    </ion-fab>
+</ion-content>

@@ -1,0 +1,182 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <h4 (click)="notification()">
+                    <ion-icon class="zmdi zmdi-notifications ion-text-start"></ion-icon>
+                    <span>2</span>
+                </h4>
+                <h3>{{"services" | translate}}</h3>
+                <div class="img_box center_img end" (click)="my_profile()">
+                    <img src="assets/images/profile.png" class="crop_img">
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <div class="your_bookings" *ngIf="showService == 'serviceBooked'">
+        <h2>{{"your_bookings" | translate}}</h2>
+        <ion-card class=" d-flex">
+            <div class="img_box end">
+                <img src="assets/images/service/service2.png">
+            </div>
+
+            <div class="text_box">
+                <h3 class="d-flex">
+                    Applicances Repair
+                </h3>
+                <h4>AC Stopped working. Need Service.</h4>
+                <h5 class="d-flex">
+                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                    22 Aug | 03:30pm
+                </h5>
+            </div>
+        </ion-card>
+    </div>
+
+
+    <div class="service_providers">
+        <h2>{{"nearby_service_providers" | translate}}</h2>
+        <ion-row>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Home <br> Cleaning</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service1.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Appliances <br> Repair</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service2.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Carpender <br> Service</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service4.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Home <br> Painting</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service5.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Plumbing <br> Service</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service6.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Packer & <br> Movers</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service7.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Home <br> Senitize</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service9.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Hair & <br> Beauty</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service8.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Home <br> Cleaning</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service1.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Appliances <br> Repair</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service2.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Carpender <br> Service</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service4.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Home <br> Painting</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service5.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Plumbing <br> Service</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service6.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Packer & <br> Movers</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service7.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Home <br> Senitize</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service9.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <div class="item d-flex" (click)="bookService()">
+                    <h3>Hair & <br> Beauty</h3>
+                    <div class="img_box end">
+                        <img src="assets/images/service/service8.png" class="animate__animated animate__fadeInUp">
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button class="animate__animated animate__zoomIn">
+            <span><ion-icon class="zmdi zmdi-search"></ion-icon></span>
+        </ion-fab-button>
+    </ion-fab>
+
+    <div class="optionButtonBg"></div>
+</ion-content>

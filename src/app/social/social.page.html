@@ -1,0 +1,583 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <h4 (click)="notification()">
+                    <ion-icon class="zmdi zmdi-notifications ion-text-start"></ion-icon>
+                    <span>2</span>
+                </h4>
+                <h3>GeteApp</h3>
+                <div class="img_box center_img end" (click)="my_profile()">
+                    <img src="assets/images/profile.png" class="crop_img">
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <ion-segment mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment" lines="none">
+        <ion-segment-button value="0">
+            <ion-label>
+                {{"post" | translate}}
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="1">
+            <ion-label>
+                {{"chat" | translate}}
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="2">
+            <ion-label>
+                {{"residents" | translate}}
+            </ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+        <!-- Post section start -->
+        <ion-slide>
+            <ion-list lines="none" class="post_section">
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="profile_info d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/avatars/img2.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h3 class="d-flex">
+                                    <strong>Emili Williamson</strong>
+                                </h3>
+                                <h4 class="d-flex">
+                                    A-232
+                                    <span class="end">20 m ago</span>
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <p>Glimps of hoyseparty held at our flat yesterday night. Thank you all for your love and support.
+                            </p>
+                            <div class="post_img center_img">
+                                <img src="assets/images/post/post4.png" class="crop_img">
+                            </div>
+
+                            <div class="actionButtons">
+                                <ion-row>
+                                    <ion-col>
+                                        <h3 class="d-flex call">
+                                            <ion-icon class="zmdi zmdi-bookmark-outline"></ion-icon>
+                                            {{"save" | translate}}
+                                        </h3>
+                                    </ion-col>
+                                    <ion-col size="5">
+                                        <h3 class="d-flex">
+                                            <ion-icon class="zmdi zmdi-comment"></ion-icon>
+                                            21 {{"comments" | translate}}
+                                        </h3>
+                                    </ion-col>
+                                    <ion-col>
+                                        <h3 class="d-flex">
+                                            <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+                                            12 {{"likes" | translate}}
+                                        </h3>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="profile_info d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/avatars/img5.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h3 class="d-flex">
+                                    <strong>George Smith</strong>
+                                </h3>
+                                <h4 class="d-flex">
+                                    C-335
+                                    <span class="end">20 m ago</span>
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <!-- <p>Glimps of hoyseparty held at our flat yesterday night.
+                                 Thank you all for your love and support.
+                            </p> -->
+                            <div class="post_img center_img">
+                                <img src="assets/images/post/post3.png" class="crop_img">
+                            </div>
+
+                            <div class="actionButtons">
+                                <ion-row>
+                                    <ion-col>
+                                        <h3 class="d-flex call">
+                                            <ion-icon class="zmdi zmdi-bookmark-outline"></ion-icon>
+                                            {{"save" | translate}}
+                                        </h3>
+                                    </ion-col>
+                                    <ion-col size="5">
+                                        <h3 class="d-flex">
+                                            <ion-icon class="zmdi zmdi-comment"></ion-icon>
+                                            21 {{"comments" | translate}}
+                                        </h3>
+                                    </ion-col>
+                                    <ion-col>
+                                        <h3 class="d-flex">
+                                            <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+                                            12 {{"likes" | translate}}
+                                        </h3>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="profile_info d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/avatars/img2.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h3 class="d-flex">
+                                    <strong>Emili Williamson</strong>
+                                </h3>
+                                <h4 class="d-flex">
+                                    A-232
+                                    <span class="end">20 m ago</span>
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <p>Glimps of hoyseparty held at our flat yesterday night. Thank you all for your love and support.
+                            </p>
+                            <div class="post_img center_img">
+                                <img src="assets/images/post/post1.png" class="crop_img">
+                            </div>
+
+                            <div class="actionButtons">
+                                <ion-row>
+                                    <ion-col>
+                                        <h3 class="d-flex call">
+                                            <ion-icon class="zmdi zmdi-bookmark-outline"></ion-icon>
+                                            {{"save" | translate}}
+                                        </h3>
+                                    </ion-col>
+                                    <ion-col size="5">
+                                        <h3 class="d-flex">
+                                            <ion-icon class="zmdi zmdi-comment"></ion-icon>
+                                            21 {{"comments" | translate}}
+                                        </h3>
+                                    </ion-col>
+                                    <ion-col>
+                                        <h3 class="d-flex">
+                                            <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+                                            12 {{"likes" | translate}}
+                                        </h3>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="profile_info d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/avatars/img5.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h3 class="d-flex">
+                                    <strong>George Smith</strong>
+                                </h3>
+                                <h4 class="d-flex">
+                                    C-335
+                                    <span class="end">20 m ago</span>
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <!-- <p>Glimps of hoyseparty held at our flat yesterday night.
+                                 Thank you all for your love and support.
+                            </p> -->
+                            <div class="post_img center_img">
+                                <img src="assets/images/post/post2.png" class="crop_img">
+                            </div>
+
+                            <div class="actionButtons">
+                                <ion-row>
+                                    <ion-col>
+                                        <h3 class="d-flex call">
+                                            <ion-icon class="zmdi zmdi-bookmark-outline"></ion-icon>
+                                            {{"save" | translate}}
+                                        </h3>
+                                    </ion-col>
+                                    <ion-col size="5">
+                                        <h3 class="d-flex">
+                                            <ion-icon class="zmdi zmdi-comment"></ion-icon>
+                                            21 {{"comments" | translate}}
+                                        </h3>
+                                    </ion-col>
+                                    <ion-col>
+                                        <h3 class="d-flex">
+                                            <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+                                            12 {{"likes" | translate}}
+                                        </h3>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+
+            </ion-list>
+        </ion-slide>
+        <!-- Post section end -->
+
+        <!-- chat section start -->
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInUp" (click)="chat()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img12.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>Samantha Smith</strong>
+                                <span class="end">12:36 pm</span>
+                            </h3>
+                            <h4>I will send updated design.</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp" (click)="chat()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img11.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>Emili Williamson</strong>
+                                <span class="end">11:58 pm</span>
+                            </h3>
+                            <h4>Development is in process.</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp" (click)="chat()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>George Taylor</strong>
+                                <span class="end">09:47 am</span>
+                            </h3>
+                            <h4>Yes. I got an approval of flow.</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp" (click)="chat()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img10.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>Samantha Smith</strong>
+                                <span class="end">11:58 am</span>
+                            </h3>
+                            <h4>I will send updated design.</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp" (click)="chat()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img6.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>Emili Williamson</strong>
+                                <span class="end">11:58 am</span>
+                            </h3>
+                            <h4>Development is in process.</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp" (click)="chat()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img7.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>George Taylor</strong>
+                                <span class="end">09:47 am</span>
+                            </h3>
+                            <h4>Yes. I got an approval of flow</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp" (click)="chat()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img4.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>George Taylor</strong>
+                                <span class="end">09:47 am</span>
+                            </h3>
+                            <h4>Yes. I got an approval of flow</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp" (click)="chat()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img5.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>George Taylor</strong>
+                                <span class="end">09:47 am</span>
+                            </h3>
+                            <h4>Yes. I got an approval of flow</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp" (click)="chat()">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>George Taylor</strong>
+                                <span class="end">09:47 am</span>
+                            </h3>
+                            <h4>Yes. I got an approval of flow</h4>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+        <!-- chat section end -->
+
+        <!-- residents section start -->
+        <ion-slide>
+            <ion-list lines="none">
+                <h2 class="d-flex">
+                    <small>{{"flat" | translate}} A-101</small>
+                    <span>&nbsp;</span>
+                </h2>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img12.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>Samantha Smith</strong>
+                                <span class="end">
+                                    <ion-icon class="zmdi zmdi-phone ion-text-start"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-comment-alt-text ion-text-end"  (click)="chat()"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>Owner</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img11.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>Emili Williamson</strong>
+                                <span class="end">
+                                    <ion-icon class="zmdi zmdi-phone ion-text-start"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-comment-alt-text ion-text-end"  (click)="chat()"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>Tenant</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>George Taylor</strong>
+                                <span class="end">
+                                    <ion-icon class="zmdi zmdi-phone ion-text-start"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-comment-alt-text ion-text-end"  (click)="chat()"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>Tenant</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <h2 class="d-flex">
+                    <small> {{"flat" | translate}} A-102</small>
+                    <span>&nbsp;</span>
+                </h2>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img10.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>Samantha Smith</strong>
+                                <span class="end">
+                                    <ion-icon class="zmdi zmdi-phone ion-text-start"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-comment-alt-text ion-text-end"  (click)="chat()"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>Owner</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img6.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>Emili Williamson</strong>
+                                <span class="end">
+                                    <ion-icon class="zmdi zmdi-phone ion-text-start"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-comment-alt-text ion-text-end"  (click)="chat()"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>Owner</h4>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <h2 class="d-flex">
+                    <small>{{"flat" | translate}} A-103</small>
+                    <span>&nbsp;</span>
+                </h2>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img7.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>George Taylor</strong>
+                                <span class="end">
+                                    <ion-icon class="zmdi zmdi-phone ion-text-start"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-comment-alt-text ion-text-end"  (click)="chat()"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>Owner</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <h2 class="d-flex">
+                    <small>{{"flat" | translate}} A-104</small>
+                    <span>&nbsp;</span>
+                </h2>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img4.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>George Taylor</strong>
+                                <span class="end">
+                                    <ion-icon class="zmdi zmdi-phone ion-text-start"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-comment-alt-text ion-text-end"  (click)="chat()"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>Tenant</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img5.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>George Taylor</strong>
+                                <span class="end">
+                                    <ion-icon class="zmdi zmdi-phone ion-text-start"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-comment-alt-text ion-text-end"  (click)="chat()"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>Owner</h4>
+                        </div>
+                    </div>
+                </ion-item>
+                <h2 class="d-flex">
+                    <small>{{"flat" | translate}} A-105</small>
+                    <span>&nbsp;</span>
+                </h2>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner d-flex">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3 class="d-flex">
+                                <strong>George Taylor</strong>
+                                <span class="end">
+                                    <ion-icon class="zmdi zmdi-phone ion-text-start"></ion-icon>
+                                    <ion-icon class="zmdi zmdi-comment-alt-text ion-text-end"  (click)="chat()"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>Tenant</h4>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+        <!-- residents section end -->
+    </ion-slides>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button class="animate__animated animate__zoomIn" *ngIf="segment == 0" (click)="creatPost()">
+            <span>+</span>
+        </ion-fab-button>
+
+        <ion-fab-button class="animate__animated animate__zoomIn" *ngIf="segment == 1">
+            <span><ion-icon class="zmdi zmdi-comment-edit"></ion-icon></span>
+        </ion-fab-button>
+
+        <ion-fab-button class="animate__animated animate__zoomIn" *ngIf="segment == 2">
+            <span><ion-icon class="zmdi zmdi-search"></ion-icon></span>
+        </ion-fab-button>
+    </ion-fab>
+
+    <div class="optionButtonBg"></div>
+</ion-content>

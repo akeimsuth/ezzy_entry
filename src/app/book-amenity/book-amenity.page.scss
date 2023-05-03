@@ -1,0 +1,109 @@
+ion-header .header_text {
+    min-height: fit-content;
+    padding-bottom: 20px;
+}
+
+.form {
+    .booking_info {
+        padding-bottom: 35px;
+        h2 {
+            margin: 0;
+            color: var(--text-black);
+            font-size: 1.05rem;
+            font-weight: 600;
+            padding-bottom: 18px;
+            span {
+                min-width: fit-content;
+                font-size: .8rem;
+                &.paid {
+                    color: var(--secondary);
+                }
+                &.free {
+                    color: var(--primary);
+                }
+            }
+        }
+        h3 {
+            margin: 0;
+            color: var(--text-light3);
+            padding: 4px 0;
+            font-size: 0.85rem;
+            span {
+                color: var(--text-black);
+                min-width: fit-content;
+                font-weight: 500;
+            }
+        }
+    }
+    ion-list {
+        h2 {
+            margin: 0;
+            color: var(--text-light3);
+            font-size: 1.05rem;
+            padding-bottom: 5px;
+            span {
+                min-width: fit-content;
+                display: flex;
+                align-items: center;
+                color: var(--text-dark);
+                ion-checkbox {
+                    --background: var(--bg-white);
+                    --background-checked: var(--primary);
+                    --border-color: var(--text-light);
+                    --border-color-checked: var(--primary);
+                    --size: 15px;
+                    margin: 0;
+                }
+            }
+        }
+        ion-row {
+            margin: 0 -5px;
+            ion-col {
+                padding: 0 5px;
+                h3 {
+                    margin: 0;
+                    font-size: 1rem;
+                    color: var(--text-black);
+                    position: relative;
+                    top: 14px;
+                }
+            }
+        }
+        ion-item {
+            padding-bottom: 0;
+            margin-bottom: 40px;
+            ion-icon {
+                padding: 0;
+                color: var(--text-light2);
+                font-size: 1.3rem;
+                min-width: 29px;
+            }
+            ion-input {
+                font-weight: 600 !important;
+            }
+        }
+    }
+}
+
+ion-footer {
+    padding: 20px 20px 30px 20px;
+    background: var(--bg-color);
+    border-top: 2px solid var(--border-line-color2);
+    h2 {
+        margin: 0;
+        color: var(--text-black);
+        font-size: 1.05rem;
+        font-weight: 600;
+        padding-bottom: 5px;
+    }
+    h3 {
+        margin: 0;
+        color: var(--text-light3);
+        font-size: 0.8rem;
+        padding-bottom: 20px;
+        font-weight: 400;
+        span {
+            min-width: fit-content;
+        }
+    }
+}

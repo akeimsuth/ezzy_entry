@@ -1,0 +1,263 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+    <div class="header_text">
+        <h1 class="animate__animated animate__fadeInUp d-flex">
+            {{"helpdesk" | translate}}
+            <ion-icon class="zmdi zmdi-filter-list end ion-text-end"></ion-icon>
+        </h1>
+
+    </div>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <ion-list lines="none">
+        <ion-item class="animate__animated animate__fadeInUp" (click)="complaintInfo()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <strong>Plumbing</strong>
+                            <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                            <span>Community</span>
+                        </h2>
+                        <h3>Valve is not working Properly.</h3>
+                    </div>
+                    <div class="status end new">
+                        <h4>{{"new" | translate}}</h4>
+                    </div>
+                </div>
+
+                <div class="itemContent">
+                    <h3 class="d-flex">
+                        <span>{{"raised_by" | translate}}</span> &nbsp;
+                        <strong>Jessica Taylor</strong>
+                        <span class="end">22 Aug, 03:30 pm</span>
+                    </h3>
+                </div>
+
+                <div class="itemFooter">
+                    <h3 class="d-flex">
+                        <strong>
+                            <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+                            {{"mark_as_resolved" | translate}}
+                        </strong>
+
+                        <span class="end">
+                            <ion-icon class="zmdi zmdi-comment-text"></ion-icon>
+                            08 {{"comments" | translate}}
+                        </span>
+                    </h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="complaintInfo()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <strong>Electricity</strong>
+                            <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                            <span>Personal</span>
+                        </h2>
+                        <h3>Power fluctuates sometimes.</h3>
+                    </div>
+                    <div class="status end resolved">
+                        <h4>{{"resolved" | translate}}</h4>
+                    </div>
+                </div>
+
+                <div class="itemContent">
+                    <h3 class="d-flex">
+                        <span>{{"resolved_by" | translate}}</span> &nbsp;
+                        <strong>George Haydon</strong>
+                        <span class="end">18 Aug, 01:30 pm</span>
+                    </h3>
+                </div>
+
+                <div class="itemFooter">
+                    <h3 class="d-flex">
+                        <strong>
+                            <ion-icon class="zmdi zmdi-undo"></ion-icon>
+                            {{"re_open" | translate}}
+                        </strong>
+
+                        <span class="end">
+                            <ion-icon class="zmdi zmdi-comment-text"></ion-icon>
+                            02 {{"comments" | translate}}
+                        </span>
+                    </h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="complaintInfo()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <strong>Parking</strong>
+                            <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                            <span>Community</span>
+                        </h2>
+                        <h3>Water leakage in parking area.</h3>
+                    </div>
+                    <div class="status end  new">
+                        <h4>{{"new" | translate}}</h4>
+                    </div>
+                </div>
+
+                <div class="itemContent">
+                    <h3 class="d-flex">
+                        <span>{{"raised_by" | translate}}</span> &nbsp;
+                        <strong>Peter Williamson</strong>
+                        <span class="end">17 Aug, 08:30 pm</span>
+                    </h3>
+                </div>
+
+                <div class="itemFooter">
+                    <h3 class="d-flex">
+                        <strong>
+                            <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+                            {{"mark_as_resolved" | translate}}
+                        </strong>
+
+                        <span class="end">
+                            <ion-icon class="zmdi zmdi-comment-text"></ion-icon>
+                            08 {{"comments" | translate}}
+                        </span>
+                    </h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="complaintInfo()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <strong>Plumbing</strong>
+                            <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                            <span>Community</span>
+                        </h2>
+                        <h3>Valve is not working Properly.</h3>
+                    </div>
+                    <div class="status end new">
+                        <h4>{{"new" | translate}}</h4>
+                    </div>
+                </div>
+
+                <div class="itemContent">
+                    <h3 class="d-flex">
+                        <span>{{"raised_by" | translate}}</span> &nbsp;
+                        <strong>Jessica Taylor</strong>
+                        <span class="end">22 Aug, 03:30 pm</span>
+                    </h3>
+                </div>
+
+                <div class="itemFooter">
+                    <h3 class="d-flex">
+                        <strong>
+                            <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+                            {{"mark_as_resolved" | translate}}
+                        </strong>
+
+                        <span class="end">
+                            <ion-icon class="zmdi zmdi-comment-text"></ion-icon>
+                            08 {{"comments" | translate}}
+                        </span>
+                    </h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="complaintInfo()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <strong>Electricity</strong>
+                            <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                            <span>Personal</span>
+                        </h2>
+                        <h3>Power fluctuates sometimes.</h3>
+                    </div>
+                    <div class="status end resolved">
+                        <h4>{{"resolved" | translate}}</h4>
+                    </div>
+                </div>
+
+                <div class="itemContent">
+                    <h3 class="d-flex">
+                        <span>{{"resolved_by" | translate}}</span> &nbsp;
+                        <strong>George Haydon</strong>
+                        <span class="end">18 Aug, 01:30 pm</span>
+                    </h3>
+                </div>
+
+                <div class="itemFooter">
+                    <h3 class="d-flex">
+                        <strong>
+                            <ion-icon class="zmdi zmdi-undo"></ion-icon>
+                            {{"re_open" | translate}}
+                        </strong>
+
+                        <span class="end">
+                            <ion-icon class="zmdi zmdi-comment-text"></ion-icon>
+                            02 {{"comments" | translate}}
+                        </span>
+                    </h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="complaintInfo()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex">
+                            <strong>Parking</strong>
+                            <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                            <span>Community</span>
+                        </h2>
+                        <h3>Water leakage in parking area.</h3>
+                    </div>
+                    <div class="status end  new">
+                        <h4>{{"new" | translate}}</h4>
+                    </div>
+                </div>
+
+                <div class="itemContent">
+                    <h3 class="d-flex">
+                        <span>{{"raised_by" | translate}}</span> &nbsp;
+                        <strong>Peter Williamson</strong>
+                        <span class="end">17 Aug, 08:30 pm</span>
+                    </h3>
+                </div>
+
+                <div class="itemFooter">
+                    <h3 class="d-flex">
+                        <strong>
+                            <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+                            {{"mark_as_resolved" | translate}}
+                        </strong>
+
+                        <span class="end">
+                            <ion-icon class="zmdi zmdi-comment-text"></ion-icon>
+                            08 {{"comments" | translate}}
+                        </span>
+                    </h3>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <ion-fab class="animate__animated animate__zoomIn" vertical="bottom" horizontal="center" slot="fixed" (click)="raiseComplaint()">
+        <h2> <span>+ {{"raise_new_complaint" | translate}}</span></h2>
+    </ion-fab>
+</ion-content>

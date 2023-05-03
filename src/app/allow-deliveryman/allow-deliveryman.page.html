@@ -1,0 +1,72 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <ion-icon class="zmdi zmdi-close ion-text-start" (click)="dismiss()"></ion-icon>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <ion-card>
+        <ion-card-header class="d-flex">
+            <h2>{{"allow_deliveryman" | translate}}</h2>
+            <div class="img_box end">
+                <img src="assets/images/allow/allow_deliveryman.png">
+            </div>
+        </ion-card-header>
+        <ion-card-content>
+            <div class="form">
+                <ion-list lines="none">
+                    <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                        <div class="item_inner">
+                            <ion-label mode="md" style="display:none !important;">{{"select_delivery_company" | translate}}</ion-label>
+                            <div class="input_box d-flex">
+                                <ion-select mode="md" placeholder="{{'select_delivery_company' | translate}}" cancelText="{{'cancel' | translate}}" okText="{{'ok' | translate}}">
+                                    <ion-select-option value="1">FedEx</ion-select-option>
+                                    <ion-select-option value="2">UPS</ion-select-option>
+                                    <ion-select-option value="3">XPO</ion-select-option>
+                                    <ion-select-option value="4">USPS</ion-select-option>
+                                    <ion-select-option value="5">Walmart</ion-select-option>
+                                    <ion-select-option value="6">Amazon</ion-select-option>
+                                    <ion-select-option value="7">Postmates</ion-select-option>
+                                </ion-select>
+                                <ion-icon class="zmdi zmdi-caret-down  ion-text-end end"></ion-icon>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <!-- <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                        <div class="item_inner">
+                            <div class="input_box d-flex">
+                                <ion-input type="number" value="" placeholder="{{'phone_number' | translate}}"></ion-input>
+                            </div>
+                        </div>
+                    </ion-item> -->
+
+                    <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex ion-align-items-start">
+                            <ion-label mode="md">{{"to_enter_in_next" | translate}}</ion-label>
+                            &nbsp;&nbsp;
+                            <div class="input_box d-flex">
+                                <ion-select mode="md" class="ion-text-end" placeholder="{{'to_enter' | translate}}" cancelText="{{'cancel' | translate}}" okText="{{'ok' | translate}}" [(ngModel)]="to_enter">
+                                    <ion-select-option value="today">{{"today" | translate}}</ion-select-option>
+                                    <ion-select-option value="tomorrow">{{"tomorrow" | translate}}</ion-select-option>
+                                </ion-select>
+                                <ion-icon class="zmdi zmdi-caret-down  ion-text-end end"></ion-icon>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item lines="none" class="animate__animated animate__fadeInUp send_gatepass">
+                        <div class="item_inner d-flex">
+                            <ion-checkbox></ion-checkbox>
+                            &nbsp;&nbsp;&nbsp;
+                            <ion-label mode="md">{{"keep_package_at_gate" | translate}}.</ion-label>
+                        </div>
+                    </ion-item>
+
+                    <ion-button size="large" shape="block" fill="solid" mode="md" class="btn animate__animated animate__fadeInUp" (click)="dismiss()">{{'submit' | translate}}</ion-button>
+                </ion-list>
+            </div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

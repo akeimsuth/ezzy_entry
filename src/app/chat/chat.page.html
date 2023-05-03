@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/avatars/img12.png" class="crop_img">
+                </div>
+                <div class="text_box ion-text-start">
+                    <h2>Samantha Smith</h2>
+                    <h3>A - 101</h3>
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <div class="chat_container d-flex">
+        <div class="chat_box d-flex animate__animated animate__fadeInUp send">
+            <div class="chat">
+                <h2>&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, conse adipisicing elit.</h2>
+                <p>01 min ago</p>
+            </div>
+        </div>
+
+        <div class="chat_box d-flex animate__animated animate__fadeInUp received">
+            <div class="chat">
+                <h2>Lorem ipsum dolor sit amet, conse adipisicing elit, sed do eiusmod tempoor incididunt.</h2>
+                <p>02 min ago</p>
+            </div>
+        </div>
+        <div class="chat_box d-flex animate__animated animate__fadeInUp send">
+            <div class="chat">
+                <div class="img_box center_img">
+                    <img src="assets/images/post/post2.png" class="crop_img">
+                </div>
+                <h2>&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, conse adipisicing elit.</h2>
+                <p>05 min ago</p>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <div class="form d-flex">
+        <h3>
+            <img src="assets/images/icons/ic_link.png">
+        </h3>
+        <ion-item lines="none">
+            <div class="item_inner">
+                <div class="input_box">
+                    <ion-textarea rows="1" auto-grow="true" mode="md" type="text" placeholder="{{'write_your_message' | translate}}"></ion-textarea>
+                </div>
+            </div>
+        </ion-item>
+
+        <h3 class="end">
+            <img src="assets/images/icons/ic_send.png">
+        </h3>
+    </div>
+</ion-footer>

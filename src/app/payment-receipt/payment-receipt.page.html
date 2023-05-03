@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" defaultHref="society-payments" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-card>
+        <div class="banner ion-text-center">
+            <img src="assets/images/done.png" class="animate__animated animate__zoomIn">
+            <h1 class="animate__animated animate__fadeInUp"> {{"payment_successful" | translate}} !!</h1>
+        </div>
+
+        <div class="payment_info">
+            <h2 class="d-flex animate__animated animate__fadeInUp">
+                {{"securuty_deposite" | translate}}
+                <span class="end"> {{"paid" | translate}}</span>
+            </h2>
+            <h3 class="d-flex animate__animated animate__fadeInUp">
+                {{"amoutn_paid" | translate}}
+                <strong class="end">$50.00</strong>
+            </h3>
+        </div>
+        <div class="other_info">
+            <h3 class="d-flex animate__animated animate__fadeInUp">
+                {{"paid_on" | translate}}
+                <span class="end">02 May, 10:30pm</span>
+            </h3>
+            <h3 class="d-flex animate__animated animate__fadeInUp">
+                {{"paid_via" | translate}}
+                <span class="end">Debit Card</span>
+            </h3>
+            <h3 class="d-flex animate__animated animate__fadeInUp">
+                {{"transaction_id" | translate}}
+                <span class="end">DFS21455145411</span>
+            </h3>
+        </div>
+
+        <p class="animate__animated animate__fadeInUp">
+            {{"this_is_system_genrated_recept_no_need_to_sign" | translate}}.
+        </p>
+
+        <div class="watermark animate__animated animate__fadeInUp ">
+            <img src="assets/images/logo2.png">
+        </div>
+
+        <ion-button size="large" shape="block" fill="outline" mode="md" class="btn animate__animated animate__fadeInUp">{{'download_receipt' | translate}}</ion-button>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <div class="watermark animate__animated animate__fadeInUp ">
+                    <img src="assets/images/logo2.png">
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <div class="img_box center_img animate__animated animate__zoomIn">
+        <img src="assets/images/avatars/img14.jpg" class="crop_img">
+    </div>
+
+    <div class="text_box ion-text-center animate__animated animate__fadeInUp">
+        <h2>Bruno Stevenson</h2>
+        <h3>Guest Watting at gate</h3>
+    </div>
+
+    <ion-row>
+        <ion-col size="6" class="ion-text-center animate__animated animate__zoomIn">
+            <ion-icon class="zmdi zmdi-phone"></ion-icon>
+            <h3> {{"call_at_gate" | translate}}</h3>
+        </ion-col>
+        <ion-col size="6" class="ion-text-center animate__animated animate__zoomIn" (click)="dismiss()">
+            <ion-icon class="zmdi zmdi-close"></ion-icon>
+            <h3> {{"deny" | translate}}</h3>
+        </ion-col>
+    </ion-row>
+
+
+    <div class="swipeButton animate__animated animate__zoomIn" #swipeButton>
+        <div class="swipeThumb" #swipeThumb>
+            <span>
+                <ion-icon class="zmdi zmdi-chevron-right"></ion-icon>
+                <ion-icon class="zmdi zmdi-chevron-right"></ion-icon>
+                <ion-icon class="zmdi zmdi-chevron-right"></ion-icon>
+            </span>
+        </div>
+        <h3>{{"swipe_to_allow" | translate}}</h3>
+    </div>
+
+</ion-content>

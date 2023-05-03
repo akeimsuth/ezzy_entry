@@ -1,0 +1,87 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+    <div class="header_text">
+        <h1 class="animate__animated animate__fadeInUp">
+            {{"select_society" | translate}}
+        </h1>
+        <h2 class="animate__animated animate__fadeInUp">
+            {{'search_and_select_your_society_listed' | translate}} <br> {{'on' | translate}} AppGate
+        </h2>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <ion-label mode="md">{{"select_location" | translate}}</ion-label>
+                    <div class="input_box d-flex">
+                        <ion-select mode="md" placeholder="{{'select_location' | translate}}" cancelText="{{'cancel' | translate}}" okText="{{'ok' | translate}}" [(ngModel)]="select_location">
+                            <ion-select-option value="1">New York</ion-select-option>
+                            <ion-select-option value="2">California</ion-select-option>
+                            <ion-select-option value="3">Illinois</ion-select-option>
+                            <ion-select-option value="4">Texas</ion-select-option>
+                            <ion-select-option value="5">Arizona</ion-select-option>
+                            <ion-select-option value="6">Pennsylvania</ion-select-option>
+                            <ion-select-option value="7">Florida</ion-select-option>
+                            <ion-select-option value="8">North Carolina</ion-select-option>
+                            <ion-select-option value="9">Washington</ion-select-option>
+                            <ion-select-option value="10">Oklahoma</ion-select-option>
+                            <ion-select-option value="11">Arizona</ion-select-option>
+                        </ion-select>
+                        <ion-icon class="zmdi zmdi-caret-down  ion-text-end end"></ion-icon>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <ion-label>{{'search_your_society' | translate}}</ion-label>
+                    <div class="input_box d-flex">
+                        <ion-icon class="zmdi zmdi-search ion-text-start"></ion-icon>
+                        <ion-searchbar mode="md" searchIcon="hide" clear-icon="string" placeholder="{{'start_typing_society_name' | translate}}">
+                        </ion-searchbar>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <ion-label mode="md">{{"select_building" | translate}}</ion-label>
+                    <div class="input_box d-flex">
+                        <ion-select mode="md" placeholder="{{'select_building' | translate}}" cancelText="{{'cancel' | translate}}" okText="{{'ok' | translate}}" [(ngModel)]="select_building">
+                            <ion-select-option value="1">A Wing</ion-select-option>
+                            <ion-select-option value="2">B Wing</ion-select-option>
+                            <ion-select-option value="3">C Wing</ion-select-option>
+                            <ion-select-option value="4">D Wing</ion-select-option>
+                            <ion-select-option value="5">E Wing</ion-select-option>
+                            <ion-select-option value="6">F Wing</ion-select-option>
+                            <ion-select-option value="7">G Wing</ion-select-option>
+                        </ion-select>
+                        <ion-icon class="zmdi zmdi-caret-down  ion-text-end end"></ion-icon>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <ion-label mode="md">{{"enter_flat_number" | translate}}</ion-label>
+                    <div class="input_box d-flex">
+                        <div class="input_box">
+                            <ion-input type="name" value="B - 254" placeholder="{{'enter_flat_number' | translate}}"></ion-input>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" shape="block" fill="solid" mode="md" class="btn animate__animated animate__fadeInUp" (click)="continue()">{{'continue' | translate}}</ion-button>
+</ion-footer>

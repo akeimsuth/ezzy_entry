@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <h4 (click)="dismiss()">
+                    <ion-icon class="zmdi zmdi-close ion-text-start"></ion-icon>
+                </h4>
+                <div class="watermark animate__animated animate__fadeInUp ">
+                    <img src="assets/images/logo2.png">
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <ion-card class="animate__animated animate__zoomIn">
+        <ion-card-header class="d-flex">
+            <h2 class="ion-text-center">{{"gate_pass" | translate}}</h2>
+        </ion-card-header>
+        <ion-card-content>
+            <div class="qr_code">
+                <img src="assets/images/qrcode.png">
+            </div>
+
+            <div class="otp">
+                <h3>541142</h3>
+            </div>
+            <p>{{"show_qr_code_or_tell_otp_to_guard" | translate}}</p>
+
+            <div class="card_border">
+                <span>&nbsp;</span>
+            </div>
+
+
+            <div class="person_info ion-text-start">
+                <div class="img_box center_img">
+                    <img src="assets/images/avatars/img1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2>George Smith</h2>
+                    <h3>Resident at <strong>B-254</strong></h3>
+                </div>
+            </div>
+
+            <div class="gatPass_valid ion-text-center">
+                <p>Set as <strong>Family Member</strong> 23 Jun 22</p>
+            </div>
+        </ion-card-content>
+    </ion-card>
+
+    <div class="buttons  animate__animated animate__zoomIn">
+        <ion-row>
+            <ion-col size="6">
+                <h2>
+                    <ion-icon class="zmdi zmdi-share ion-text-start"></ion-icon> {{"share" | translate}}</h2>
+            </ion-col>
+            <ion-col size="6">
+                <h2>
+                    <ion-icon class="zmdi zmdi zmdi-download ion-text-start"></ion-icon> {{"download" | translate}}</h2>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

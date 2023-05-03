@@ -1,0 +1,558 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title-inner d-flex" style="min-height: 70px;">
+                <div *ngIf="config.demoMode" (click)="buyappalert()" class="buy_this_app end">
+                    <h2>
+                        {{"buy_this_app" | translate}}
+                    </h2>
+                </div>
+            </div>
+        </ion-title>
+
+    </ion-toolbar>
+
+    <ion-card (click)="viewProfile()">
+        <div class="cardHeader d-flex">
+            <div class="img_box center_img">
+                <img src="assets/images/profile.png" class="crop_img">
+            </div>
+            <div class="text_box">
+                <h2 class="d-flex"> Samantah Smith </h2>
+                <h3 class="d-flex">
+                    {{"view_profile" | translate}}
+                    <img src="assets/images/icons/ic_qrCode.png" class="end">
+                </h3>
+            </div>
+        </div>
+
+        <div class="cardContent d-flex">
+            <ion-icon class="zmdi zmdi-city-alt ion-text-center"></ion-icon>
+            <h3 class="d-flex">
+                B - 254. Jackson Heights
+            </h3>
+            <ion-icon class="zmdi zmdi-share ion-text-end end"></ion-icon>
+        </div>
+    </ion-card>
+
+
+    <ion-segment mode="ios" [(ngModel)]="segment" lines="none">
+        <ion-segment-button value="posts">
+            <ion-label>
+                {{"posts" | translate}}
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="household">
+            <ion-label>
+                {{"household" | translate}}
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="settings">
+            <ion-label>
+                {{"settings" | translate}}
+            </ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen [ngSwitch]="segment">
+    <!-- Post section start -->
+    <ion-list lines="none" class="post_section" *ngSwitchCase="'posts'">
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <div class="profile_info d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/images/profile.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h3 class="d-flex">
+                            <strong>Samantha Smith</strong>
+                        </h3>
+                        <h4 class="d-flex">
+                            B-254
+                            <span class="end">20 m ago</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <p>
+                        Does everyone have an electricity problem at their home? Too much power fluctuation at my home!
+                    </p>
+                    <!-- <div class="post_img center_img">
+                                <img src="assets/images/post/post3.png" class="crop_img">
+                            </div> -->
+
+                    <div class="actionButtons">
+                        <ion-row>
+                            <ion-col>
+                                <h3 class="d-flex call">
+                                    <ion-icon class="zmdi zmdi-bookmark-outline"></ion-icon>
+                                    {{"save" | translate}}
+                                </h3>
+                            </ion-col>
+                            <ion-col size="5">
+                                <h3 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-comment"></ion-icon>
+                                    21 {{"comments" | translate}}
+                                </h3>
+                            </ion-col>
+                            <ion-col (click)="GatePass()">
+                                <h3 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+                                    12 {{"likes" | translate}}
+                                </h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <div class="profile_info d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/images/profile.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h3 class="d-flex">
+                            <strong>Samantah Smith</strong>
+                        </h3>
+                        <h4 class="d-flex">
+                            B-254
+                            <span class="end">20 m ago</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <p>Glimps of hoyseparty held at our flat yesterday night. Thank you all for your love and support.
+                    </p>
+                    <div class="post_img center_img">
+                        <img src="assets/images/post/post1.png" class="crop_img">
+                    </div>
+
+                    <div class="actionButtons">
+                        <ion-row>
+                            <ion-col>
+                                <h3 class="d-flex call">
+                                    <ion-icon class="zmdi zmdi-bookmark-outline"></ion-icon>
+                                    {{"save" | translate}}
+                                </h3>
+                            </ion-col>
+                            <ion-col size="5">
+                                <h3 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-comment"></ion-icon>
+                                    21 {{"comments" | translate}}
+                                </h3>
+                            </ion-col>
+                            <ion-col (click)="GatePass()">
+                                <h3 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+                                    12 {{"likes" | translate}}
+                                </h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <div class="profile_info d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/images/profile.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h3 class="d-flex">
+                            <strong>Samantah Smith</strong>
+                        </h3>
+                        <h4 class="d-flex">
+                            B-254
+                            <span class="end">20 m ago</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <p>Glimps of hoyseparty held at our flat yesterday night. Thank you all for your love and support.
+                    </p>
+                    <div class="post_img center_img">
+                        <img src="assets/images/post/post4.png" class="crop_img">
+                    </div>
+
+                    <div class="actionButtons">
+                        <ion-row>
+                            <ion-col>
+                                <h3 class="d-flex call">
+                                    <ion-icon class="zmdi zmdi-bookmark-outline"></ion-icon>
+                                    {{"save" | translate}}
+                                </h3>
+                            </ion-col>
+                            <ion-col size="5">
+                                <h3 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-comment"></ion-icon>
+                                    21 {{"comments" | translate}}
+                                </h3>
+                            </ion-col>
+                            <ion-col (click)="GatePass()">
+                                <h3 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+                                    12 {{"likes" | translate}}
+                                </h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <div class="profile_info d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/images/profile.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h3 class="d-flex">
+                            <strong>Samantha Smith</strong>
+                        </h3>
+                        <h4 class="d-flex">
+                            B-254
+                            <span class="end">20 m ago</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <!-- <p>Glimps of hoyseparty held at our flat yesterday night.
+                                 Thank you all for your love and support.
+                            </p> -->
+                    <div class="post_img center_img">
+                        <img src="assets/images/post/post2.png" class="crop_img">
+                    </div>
+
+                    <div class="actionButtons">
+                        <ion-row>
+                            <ion-col>
+                                <h3 class="d-flex call">
+                                    <ion-icon class="zmdi zmdi-bookmark-outline"></ion-icon>
+                                    {{"save" | translate}}
+                                </h3>
+                            </ion-col>
+                            <ion-col size="5">
+                                <h3 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-comment"></ion-icon>
+                                    21 {{"comments" | translate}}
+                                </h3>
+                            </ion-col>
+                            <ion-col (click)="GatePass()">
+                                <h3 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+                                    12 {{"likes" | translate}}
+                                </h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+    <!-- Post section end -->
+
+    <!-- Household section start -->
+    <ion-list lines="none" class="household_section" *ngSwitchCase="'household'">
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <div class="profile_info d-flex">
+                    <div class="text_box">
+                        <h3 class="d-flex">
+                            <strong>My Family</strong>
+                            <span class="end" (click)="addFamilyMember()">+ {{"add" | translate}}</span>
+                        </h3>
+                        <h4 class="d-flex">
+                            {{"add_family_member_for_quick_entries" | translate}}
+                        </h4>
+                    </div>
+                </div>
+                <div class="scroll-x">
+                    <div class="scroll_item animate__animated animate__zoomIn" (click)="GatePass()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>George <br> Smith</h3>
+                            <h4>Husband</h4>
+                        </div>
+                        <div class="iconBox">
+                            <img src="assets/images/icons/ic_qrCode.png">
+                        </div>
+                    </div>
+                    <div class="scroll_item animate__animated animate__zoomIn" (click)="GatePass()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Jenelia <br> Smith</h3>
+                            <h4>Daughter</h4>
+                        </div>
+                        <div class="iconBox">
+                            <img src="assets/images/icons/ic_qrCode.png">
+                        </div>
+                    </div>
+                    <div class="scroll_item animate__animated animate__zoomIn" (click)="GatePass()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img3.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Struart <br> Smith</h3>
+                            <h4>Sun</h4>
+                        </div>
+                        <div class="iconBox">
+                            <img src="assets/images/icons/ic_qrCode.png">
+                        </div>
+                    </div>
+                    <div class="scroll_item animate__animated animate__zoomIn" (click)="GatePass()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>George <br> Smith</h3>
+                            <h4>Husband</h4>
+                        </div>
+                        <div class="iconBox">
+                            <img src="assets/images/icons/ic_qrCode.png">
+                        </div>
+                    </div>
+                    <div class="scroll_item animate__animated animate__zoomIn" (click)="GatePass()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Jenelia <br> Smith</h3>
+                            <h4>Daughter</h4>
+                        </div>
+                        <div class="iconBox">
+                            <img src="assets/images/icons/ic_qrCode.png">
+                        </div>
+                    </div>
+                    <div class="scroll_item animate__animated animate__zoomIn" (click)="GatePass()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img3.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Struart <br> Smith</h3>
+                            <h4>Sun</h4>
+                        </div>
+                        <div class="iconBox">
+                            <img src="assets/images/icons/ic_qrCode.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <div class="profile_info d-flex">
+                    <div class="text_box">
+                        <h3 class="d-flex">
+                            <strong>Daily Helps</strong>
+                            <span class="end" (click)="addDailyHelps()">+ {{"add" | translate}}</span>
+                        </h3>
+                        <h4 class="d-flex">
+                            {{"add_maid_laundary_helper_for_quick_enries" | translate}}
+                        </h4>
+                    </div>
+                </div>
+                <div class="scroll-x">
+                    <div class="scroll_item animate__animated animate__zoomIn" (click)="GatePass()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img4.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Eelina <br> Haydon</h3>
+                            <h4>Maid</h4>
+                        </div>
+                        <div class="iconBox">
+                            <img src="assets/images/icons/ic_qrCode.png">
+                        </div>
+                    </div>
+                    <div class="scroll_item animate__animated animate__zoomIn" (click)="GatePass()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Leonis <br> Taylor</h3>
+                            <h4>Laundryman</h4>
+                        </div>
+                        <div class="iconBox">
+                            <img src="assets/images/icons/ic_qrCode.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <div class="profile_info d-flex">
+                    <div class="text_box">
+                        <h3 class="d-flex">
+                            <strong>My Vehicles</strong>
+                            <span class="end" (click)="addMyVehicle()">+ {{"add" | translate}}</span>
+                        </h3>
+                        <h4 class="d-flex">
+                            {{"add_your_vehicles_for_quick_enries" | translate}}
+                        </h4>
+                    </div>
+                </div>
+                <div class="scroll-x">
+                    <div class="scroll_item animate__animated animate__zoomIn" (click)="GatePass()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img13.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>GJZ 0196 <br> Ferrari 812 GTC</h3>
+                            <h4>Grey</h4>
+                        </div>
+                        <div class="iconBox">
+                            <img src="assets/images/icons/ic_qrCode.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <div class="profile_info d-flex">
+                    <div class="text_box">
+                        <h3 class="d-flex">
+                            <strong>Frequent Entries</strong>
+                            <span class="end" (click)="addFrequestEntries()">+ {{"add" | translate}}</span>
+                        </h3>
+                        <h4 class="d-flex">
+                            {{"add_your_frequent_for_quick_enries" | translate}}
+                        </h4>
+                    </div>
+                </div>
+                <div class="scroll-x">
+                    <div class="scroll_item animate__animated animate__zoomIn" (click)="GatePass()">
+                        <div class="img_box center_img">
+                            <img src="assets/images/avatars/img11.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Emili <br> Williamson</h3>
+                            <h4>Friend</h4>
+                        </div>
+                        <div class="iconBox">
+                            <img src="assets/images/icons/ic_qrCode.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+    <!-- Household section end -->
+
+    <!-- Settings section Start -->
+    <ion-list lines="none" class="settings_section" *ngSwitchCase="'settings'">
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <h2> {{"my_flat_or_villa" | translate}}</h2>
+                <div class="item_box d-flex">
+                    <div class="icon_box" style="background: #566ee7;">
+                        <ion-icon class="zmdi zmdi-home ion-text-center"></ion-icon>
+                    </div>
+                    <h3>B - 254. Jackson Heights </h3>
+                    <ion-icon class="zmdi zmdi-more end ion-text-end"></ion-icon>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="add_contact">
+                <h4>+ {{"add" | translate}}</h4>
+            </div>
+            <div class="item_inner">
+                <h2> {{"security_alert_contacts" | translate}}</h2>
+
+                <div class="item_box d-flex">
+                    <div class="icon_box" style="background: var(--primary)">
+                        <ion-icon class="zmdi zmdi-account ion-text-center"></ion-icon>
+                    </div>
+                    <h3>George Smith</h3>
+                    <ion-icon class="zmdi zmdi-more end ion-text-end"></ion-icon>
+                </div>
+                <div class="item_box d-flex">
+                    <div class="icon_box" style="background: var(--primary)">
+                        <ion-icon class="zmdi zmdi-account ion-text-center"></ion-icon>
+                    </div>
+                    <h3>Angelina Smith</h3>
+                    <ion-icon class="zmdi zmdi-more end ion-text-end"></ion-icon>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <h2>Appsgate {{"links" | translate}}</h2>
+                <div class="item_box d-flex" (click)="getSupport()">
+                    <div class="icon_box" style="background: #3ec1d2;">
+                        <ion-icon class="zmdi zmdi-email ion-text-center"></ion-icon>
+                    </div>
+                    <h3>{{"support" | translate}}</h3>
+                </div>
+                <div class="item_box d-flex" (click)="termsConditions()">
+                    <div class="icon_box" style="background: #f4b93e;">
+                        <ion-icon class="zmdi zmdi-assignment ion-text-center"></ion-icon>
+                    </div>
+                    <h3>{{"terms_conditions" | translate}}</h3>
+                </div>
+                <div class="item_box d-flex" (click)="changeLanguage()">
+                    <div class="icon_box" style="background: #34166c;">
+                        <ion-icon class="zmdi zmdi-translate ion-text-center"></ion-icon>
+                    </div>
+                    <h3>{{"change_language" | translate}}</h3>
+                </div>
+                <div class="item_box d-flex" (click)="signIn()">
+                    <div class="icon_box" style="background: #e26141;">
+                        <ion-icon class="zmdi zmdi-open-in-new ion-text-center"></ion-icon>
+                    </div>
+                    <h3>{{"logout" | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+    <!-- Settings section end -->
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button class="animate__animated animate__zoomIn" *ngIf="segment == 'posts'" (click)="creatPost()">
+            <span>+</span>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>
+
+
+
+<ion-footer class="ion-no-border" *ngIf="segment == 'settings'">
+    <div class="developed_by d-flex animate__animated animate__fadeInUp" (click)="developed_by()" *ngIf="config.demoMode">
+        <h2>{{"developed_by" | translate}}</h2>
+        <div class="img_box end">
+            <img src="assets/images/opus_labs.png">
+        </div>
+    </div>
+</ion-footer>
+
+<ion-footer class="ion-no-border" *ngIf="segment == 'household'">
+    <div class="developed_by d-flex animate__animated animate__fadeInUp" (click)="developed_by()" *ngIf="config.demoMode">
+        <h2>{{"developed_by" | translate}}</h2>
+        <div class="img_box end">
+            <img src="assets/images/opus_labs.png">
+        </div>
+    </div>
+</ion-footer>

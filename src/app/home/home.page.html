@@ -1,0 +1,234 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <h4 (click)="notification()">
+                    <ion-icon class="zmdi zmdi-notifications ion-text-start"></ion-icon>
+                    <span>2</span>
+                </h4>
+                <h3>Ezzy Entry</h3>
+                <div class="img_box center_img end" (click)="my_profile()">
+                    <img src="assets/images/profile.png" class="crop_img">
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <div class="pre_approve">
+        <div class="heading">
+            <h2>{{"pre_approve_visitors" | translate}}</h2>
+            <h3>{{"add_vistor_details_for_quick_entries" | translate}}</h3>
+        </div>
+
+        <div class="scroll-x">
+            <div class="scroll_item animate__animated animate__zoomIn" (click)="allowGuest()">
+                <div class="text_box">
+                    <h2>{{"add" | translate}} <br> Guest</h2>
+                </div>
+                <div class="img_box">
+                    <img src="assets/images/allow/allow_guest.png" class="animate__animated animate__fadeInUp">
+                </div>
+            </div>
+            <div class="scroll_item animate__animated animate__zoomIn" (click)="allowDeliveryman()">
+                <div class="text_box">
+                    <h2>{{"add" | translate}} <br> Delivery</h2>
+                </div>
+                <div class="img_box">
+                    <img src="assets/images/allow/allow_deliveryman.png" class="animate__animated animate__fadeInUp">
+                </div>
+            </div>
+            <div class="scroll_item animate__animated animate__zoomIn" (click)="allowServiceman()">
+                <div class="text_box">
+                    <h2>{{"add" | translate}} <br> Service</h2>
+                </div>
+                <div class="img_box">
+                    <img src="assets/images/allow/allow_serviceman.png" class="animate__animated animate__fadeInUp">
+                </div>
+            </div>
+            <div class="scroll_item animate__animated animate__zoomIn" (click)="allowCab()">
+                <div class="text_box">
+                    <h2>{{"add" | translate}} <br> Cab</h2>
+                </div>
+                <div class="img_box">
+                    <img src="assets/images/allow/allow_cab.png" class="animate__animated animate__fadeInUp">
+                </div>
+            </div>
+            <div class="scroll_item animate__animated animate__zoomIn" (click)="allowGuest()">
+                <div class="text_box">
+                    <h2>{{"add" | translate}} <br> Guest</h2>
+                </div>
+                <div class="img_box">
+                    <img src="assets/images/allow/allow_guest.png" class="animate__animated animate__fadeInUp">
+                </div>
+            </div>
+            <div class="scroll_item animate__animated animate__zoomIn" (click)="allowDeliveryman()">
+                <div class="text_box">
+                    <h2>{{"add" | translate}} <br> Delivery</h2>
+                </div>
+                <div class="img_box">
+                    <img src="assets/images/allow/allow_deliveryman.png" class="animate__animated animate__fadeInUp">
+                </div>
+            </div>
+            <div class="scroll_item animate__animated animate__zoomIn" (click)="allowServiceman()">
+                <div class="text_box">
+                    <h2>{{"add" | translate}} <br> Service</h2>
+                </div>
+                <div class="img_box">
+                    <img src="assets/images/allow/allow_serviceman.png" class="animate__animated animate__fadeInUp">
+                </div>
+            </div>
+            <div class="scroll_item animate__animated animate__zoomIn" (click)="allowCab()">
+                <div class="text_box">
+                    <h2>{{"add" | translate}} <br> Cab</h2>
+                </div>
+                <div class="img_box">
+                    <img src="assets/images/allow/allow_cab.png" class="animate__animated animate__fadeInUp">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="community">
+        <div class="heading">
+            <h2>{{"community" | translate}}</h2>
+            <h3>{{"everything_about_society_management" | translate}}</h3>
+        </div>
+        <ion-list lines="none">
+            <ion-item class="animate__animated animate__fadeInUp" (click)="helpdesk()">
+                <div class="item_inner d-flex">
+                    <div class="text_box">
+                        <h2>{{"helpdesk" | translate}}</h2>
+                        <h3>{{"complaint_suggetions" | translate}}</h3>
+                    </div>
+                    <div class="img_box end">
+                        <img src="assets/images/community/community1.png">
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="noticesBoard()">
+                <div class="item_inner d-flex">
+                    <div class="text_box">
+                        <h2>{{"notice_board" | translate}} &nbsp;&nbsp;<span>2</span></h2>
+                        <h3>{{"society_announcements" | translate}}</h3>
+                    </div>
+                    <div class="img_box end">
+                        <img src="assets/images/community/community2.png">
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="payment()">
+                <div class="item_inner d-flex">
+                    <div class="text_box">
+                        <h2>{{"do_society_payment" | translate}}</h2>
+                        <h3>{{"direct_payment_of_society_dues" | translate}}</h3>
+                    </div>
+                    <div class="img_box end">
+                        <img src="assets/images/community/community3.png">
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="bookAmenity()">
+                <div class="item_inner d-flex">
+                    <div class="text_box">
+                        <h2>{{"book_amenities" | translate}}</h2>
+                        <h3>{{"pre_book_society_amenities" | translate}}</h3>
+                    </div>
+                    <div class="img_box end">
+                        <img src="assets/images/community/community4.png">
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="openMoreOptions()" [ngClass]="toggleClass ? 'toggleClass active' : 'toggleClass'">
+        <ion-fab-button class="animate__animated animate__zoomIn">
+            <span>+</span>
+        </ion-fab-button>
+    </ion-fab>
+
+    <div class="optionButtonBg"></div>
+
+    <div class="moreOptions" [ngClass]="toggleClass ? 'toggleClass active' : 'toggleClass'">
+        <div class="OptionsRow">
+            <h2>{{"send_message" | translate}}</h2>
+            <ion-row>
+                <ion-col size="6" class="animate__animated animate__zoomIn">
+                    <div class="item" (click)="chat()">
+                        <div class="text_box">
+                            <h3>Admin</h3>
+                        </div>
+                        <div class="img_box">
+                            <img src="assets/images/more_options/security_admin.png" class="animate__animated animate__fadeInUp">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col size="6" class="animate__animated animate__zoomIn">
+                    <div class="item" (click)="chat()">
+                        <div class="text_box">
+                            <h3>Security</h3>
+                        </div>
+                        <div class="img_box">
+                            <img src="assets/images/more_options/security_message.png" class="animate__animated animate__fadeInUp">
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <div class="OptionsRow security_alert">
+            <h2>{{"security_alert" | translate}}</h2>
+            <ion-row>
+                <ion-col size="6" class="animate__animated animate__zoomIn">
+                    <div class="item" (click)="openMoreOptions()">
+                        <div class="text_box">
+                            <h3>Fire <br> Alert</h3>
+                        </div>
+                        <div class="img_box">
+                            <img src="assets/images/more_options/security_fire.png" class="animate__animated animate__fadeInUp">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col size="6" class="animate__animated animate__zoomIn">
+                    <div class="item" (click)="openMoreOptions()">
+                        <div class="text_box">
+                            <h3>Stuck in <br> Lift</h3>
+                        </div>
+                        <div class="img_box">
+                            <img src="assets/images/more_options/security_lift.png" class="animate__animated animate__fadeInUp">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col size="6" class="animate__animated animate__zoomIn">
+                    <div class="item" (click)="openMoreOptions()">
+                        <div class="text_box">
+                            <h3>Animal <br> Threat</h3>
+                        </div>
+                        <div class="img_box">
+                            <img src="assets/images/more_options/security_snake.png" class="animate__animated animate__fadeInUp">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col size="6" class="animate__animated animate__zoomIn">
+                    <div class="item" (click)="openMoreOptions()">
+                        <div class="text_box">
+                            <h3>Visiter <br> Threat</h3>
+                        </div>
+                        <div class="img_box">
+                            <img src="assets/images/more_options/security_guestattack.png" class="animate__animated animate__fadeInUp">
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-content>

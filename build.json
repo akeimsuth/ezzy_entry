@@ -1,0 +1,12 @@
+{
+    "android": {
+        "release": {
+            "keystore": "gateapp_u_ionic.keystore",
+            "storePassword": "gateapp_u_ionic",
+            "alias": "gateapp_u_ionic",
+            "password": "gateapp_u_ionic",
+            "keystoreType": "",
+            "packageType": "apk"
+        }
+    }
+}

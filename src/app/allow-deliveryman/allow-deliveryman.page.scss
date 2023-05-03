@@ -1,0 +1,104 @@
+ion-header {
+    background: var(--bg-black);
+    ion-toolbar {
+        --background: var(--bg-black);
+        ion-title {
+            padding: 0 20px !important;
+            ion-icon {
+                display: block;
+                color: var(--text-white);
+                height: 70px;
+                line-height: 70px;
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+ion-content {
+    --background: var(--bg-black);
+}
+
+ion-card {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: calc(100% - 40px);
+    height: fit-content;
+    border-radius: 12px;
+    background: var(--bg-white);
+    ion-card-header {
+        background: var(--bg-color);
+        border-radius: 0;
+        padding: 10px 0px 0 20px;
+        h2 {
+            margin: 0;
+            color: var(--text-black);
+            font-weight: 600;
+            font-size: 1.15rem;
+            letter-spacing: 0;
+        }
+        .img_box {
+            height: 85px;
+            display: flex;
+            align-items: flex-end;
+            min-width: 100px;
+            img {
+                display: block;
+                max-height: 85px;
+                max-width: 100px;
+            }
+        }
+    }
+    ion-card-content {
+        padding: 30px 0px 20px;
+        .form {
+            ion-list {
+                ion-item {
+                    min-height: unset !important;
+                    --min-height: unset !important;
+                    margin-bottom: 25px;
+                    border-bottom: 0!important;
+                    padding-bottom: 0;
+                    ion-label {
+                        width: fit-content !important;
+                        padding: 0 !important;
+                        font-size: 1rem !important;
+                        min-width: fit-content;
+                    }
+                    .input_box {
+                        border-bottom: 2px solid var(--border-line-color);
+                        padding-bottom: 8px;
+                    }
+                    ion-input {
+                        --placeholder-color: var(--text-light) !important;
+                        --placeholder-font-weight: 500 !important;
+                        font-size: 1.05rem !important;
+                    }
+                    &.item-select ion-select {
+                        --placeholder-color: var(--text-light) !important;
+                    }
+                    &.send_gatepass {
+                        ion-label {
+                            font-size: .85rem !important;
+                        }
+                        ion-checkbox {
+                            --background: var(--bg-white);
+                            --background-checked: var(--primary);
+                            --border-color: var(--text-light);
+                            --border-color-checked: var(--primary);
+                            --size: 18px;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .button.btn {
+            font-size: 1rem;
+        }
+    }
+}
