@@ -13,7 +13,7 @@ export class TabsPage implements OnInit {
   constructor(private modalController: ModalController, private toastController: ToastController) { }
 
   ngOnInit() {
-    setTimeout(() => this.entryCall(), 3000);
+    //setTimeout(() => this.entryCall(), 3000);
   }
 
   entryCall() {
