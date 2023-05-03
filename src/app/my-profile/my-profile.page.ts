@@ -10,6 +10,11 @@ import { BuyappalertPage } from '../buyappalert/buyappalert.page';
 import { Constants } from 'src/models/contants.models';
 import { Helper } from 'src/models/helper.models';
 import { MyEvent } from 'src/services/myevent.services';
+import {
+  Auth,
+  signOut
+} from '@angular/fire/auth';
+
 import { APP_CONFIG, AppConfig } from '../app.config';
 @Component({
   selector: 'app-my-profile',
@@ -20,7 +25,7 @@ export class MyProfilePage implements OnInit {
   segment: string = "posts";
   darkModeStatus: string;
   
-  constructor(@Inject(APP_CONFIG) public config: AppConfig, private myEvent: MyEvent, private route: Router, private navCtrl: NavController, private modalController: ModalController) {
+  constructor(@Inject(APP_CONFIG) public config: AppConfig, private myEvent: MyEvent, private route: Router, private navCtrl: NavController, private modalController: ModalController, private auth: Auth) {
     let defaultLang = window.localStorage.getItem(Constants.KEY_DEFAULT_LANGUAGE);
   }
  
@@ -59,8 +64,10 @@ export class MyProfilePage implements OnInit {
   changeLanguage() {
     this.route.navigate(['./change-language']);
   }
+
  
-  signIn() {
+  async signOut() {
+    await signOut(this.auth);
     this.navCtrl.navigateRoot(['./sign-in']);
   }
   
