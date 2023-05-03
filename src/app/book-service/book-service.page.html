@@ -1,0 +1,98 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <ion-icon class="zmdi zmdi-close ion-text-start" (click)="dismiss()"></ion-icon>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+    <ion-modal class="dateTimeModal" trigger="Date">
+        <ng-template>
+            <ion-content>
+                <ion-datetime mode="md" #datetime presentation="date" [value]="dateValue" size="cover" (ionChange)="dateChanged(datetime.value)">
+                    <!-- <div slot="title">My Custom Title</div> -->
+                    <ion-buttons slot="buttons">
+                        <ion-button (click)="close()">{{'cancel' | translate}}</ion-button>
+                        <ion-button (click)="select()">{{'ok' | translate}}</ion-button>
+                    </ion-buttons>
+                </ion-datetime>
+            </ion-content>
+        </ng-template>
+    </ion-modal>
+
+    <ion-modal class="dateTimeModal" trigger="Time">
+        <ng-template>
+            <ion-content>
+                <ion-datetime mode="md" #datetime presentation="time" [value]="dateValue" size="cover" (ionChange)="timeChanged(datetime.value)">
+                    <!-- <div slot="title">My Custom Title</div> -->
+                    <ion-buttons slot="buttons">
+                        <ion-button (click)="close()">{{'cancel' | translate}}</ion-button>
+                        <ion-button (click)="select()">{{'ok' | translate}}</ion-button>
+                    </ion-buttons>
+                </ion-datetime>
+            </ion-content>
+        </ng-template>
+    </ion-modal>
+
+    <ion-card>
+        <ion-card-header class="d-flex">
+            <h2>{{"book_for" | translate}} <br> Appliances Repair</h2>
+            <div class="img_box end">
+                <img src="assets/images/service/service2.png">
+            </div>
+        </ion-card-header>
+        <ion-card-content>
+            <div class="form">
+                <ion-list lines="none">
+                    <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                        <div class="item_inner ion-align-items-start">
+                            <ion-label mode="md" style="display:none ;">{{"select_service" | translate}}</ion-label>
+                            <div class="input_box d-flex">
+                                <ion-select mode="md" placeholder="{{'select_service' | translate}}" cancelText="{{'cancel' | translate}}" okText="{{'ok' | translate}}">
+                                    <ion-select-option value="1">AC Repair</ion-select-option>
+                                    <ion-select-option value="2">TV Repair</ion-select-option>
+                                    <ion-select-option value="3">Mixer Grinder Repair</ion-select-option>
+                                    <ion-select-option value="4">Door Bell Repair</ion-select-option>
+                                    <ion-select-option value="5">Fan Repair</ion-select-option>
+                                </ion-select>
+                                <ion-icon class="zmdi zmdi-caret-down  ion-text-end end"></ion-icon>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                        <div class="item_inner">
+                            <div class="input_box d-flex">
+                                <ion-textarea rows="1" auto-grow="true" mode="md" type="text" value="" placeholder="{{'brief_your_problem' | translate}}"></ion-textarea>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item lines="none" class="book_visit_on animate__animated animate__fadeInUp">
+                        <div class="item_inner">
+                            <ion-label mode="md">{{"book_visit_on" | translate}}</ion-label>
+                            <ion-row>
+                                <ion-col size="6">
+                                    <div class="input_box d-flex" id="Date">
+
+                                        <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                        <ion-input mode="md" type="text" value="{{ Date }}" placeholder="{{'select_date' | translate}}" readonly></ion-input>
+                                    </div>
+                                </ion-col>
+                                <ion-col size="6" id="Time">
+                                    <div class="input_box d-flex">
+                                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                                        <ion-input mode="md" type="text" value="{{ Time }}" placeholder="{{'select_time' | translate}}" readonly></ion-input>
+                                    </div>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </ion-item>
+                    <ion-button size="large" shape="block" fill="solid" mode="md" class="btn animate__animated animate__fadeInUp" (click)="submit()">{{'submit' | translate}}</ion-button>
+                </ion-list>
+            </div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

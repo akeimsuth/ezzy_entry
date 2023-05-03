@@ -1,0 +1,71 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <ion-icon class="zmdi zmdi-close ion-text-start" (click)="dismiss()"></ion-icon>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <ion-card>
+        <ion-card-header class="d-flex">
+            <h2>{{"allow_my_cab" | translate}}</h2>
+            <div class="img_box end">
+                <img src="assets/images/allow/allow_cab.png">
+            </div>
+        </ion-card-header>
+        <ion-card-content>
+            <div class="form">
+                <ion-list lines="none">
+                    <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                        <div class="item_inner">
+                            <div class="input_box d-flex">
+                                <ion-input type="number" value="" placeholder="{{'last_4_digit_of_cab_num' | translate}}"></ion-input>
+                                <!-- <ion-icon class="zmdi zmdi-accounts-list-alt end ion-text-end"></ion-icon> -->
+                            </div>
+                        </div>
+                    </ion-item>
+                    <!-- <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                        <div class="item_inner">
+                            <div class="input_box d-flex">
+                                <ion-input type="number" value="" placeholder="{{'phone_number' | translate}}"></ion-input>
+                            </div>
+                        </div>
+                    </ion-item> -->
+
+                    <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex ion-align-items-start">
+                            <ion-label mode="md">{{"company" | translate}}</ion-label>
+                            &nbsp;&nbsp;
+                            <div class="input_box d-flex">
+                                <ion-select mode="md" class="ion-text-end" placeholder="{{'company' | translate}}" cancelText="{{'cancel' | translate}}" okText="{{'ok' | translate}}" [(ngModel)]="cab_company">
+                                    <ion-select-option value="1">Uber</ion-select-option>
+                                    <ion-select-option value="2">Lyft</ion-select-option>
+                                    <ion-select-option value="3">Hailo</ion-select-option>
+                                    <ion-select-option value="4">Ola</ion-select-option>
+                                    <ion-select-option value="5">Grab Taxi</ion-select-option>
+                                </ion-select>
+                                <ion-icon class="zmdi zmdi-caret-down  ion-text-end end"></ion-icon>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <!-- <ion-item lines="none" class="animate__animated animate__fadeInUp send_gatepass">
+                        <div class="item_inner d-flex">
+                            <ion-checkbox></ion-checkbox>
+                            &nbsp;&nbsp;&nbsp;
+                            <ion-label mode="md">{{"send_enterpass_to_serviceman" | translate}}</ion-label>
+                        </div>
+                    </ion-item> -->
+
+                    <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                        &nbsp;
+                    </ion-item>
+
+
+                    <ion-button size="large" shape="block" fill="solid" mode="md" class="btn animate__animated animate__fadeInUp" (click)="dismiss()">{{'submit' | translate}}</ion-button>
+                </ion-list>
+            </div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,839 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <h4 (click)="notification()">
+                    <ion-icon class="zmdi zmdi-notifications ion-text-start"></ion-icon>
+                    <span>2</span>
+                </h4>
+                <h3>{{"activity" | translate}}</h3>
+                <div class="img_box center_img end" (click)="my_profile()">
+                    <img src="assets/images/profile.png" class="crop_img">
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <ion-segment mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment" lines="none">
+        <ion-segment-button value="0">
+            <ion-label>
+                {{"today" | translate}}
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="1">
+            <ion-label>
+                {{"upcoming" | translate}}
+            </ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/allow/allow_guest.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Guest | Emili Williamson
+                                </h2>
+                                <h3 class="pre_approved">{{"pre_approved" | translate}}</h3>
+                                <!-- <h3 class="inside">{{"inside" | translate}}</h3> -->
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/avatars/img4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Maid | Emili Williamson
+                                </h2>
+                                <!-- <h3 class="pre_approved">{{"pre_approved" | translate}}</h3> -->
+                                <h3 class="inside">{{"inside" | translate}}</h3>
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/service/service2.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Appliances Repair
+                                </h2>
+                                <h3 class="pre_approved">{{"service_booked" | translate}}</h3>
+                                <!-- <h3 class="inside">{{"inside" | translate}}</h3> -->
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/allow/allow_cab.png" class="crop_img" style="min-height: fit-content;">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Cab | Uber 2250
+                                </h2>
+                                <h3 class="pre_approved">{{"pre_approved" | translate}}</h3>
+                                <!-- <h3 class="inside">{{"inside" | translate}}</h3> -->
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/allow/allow_guest.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Guest | Emili Williamson
+                                </h2>
+                                <h3 class="pre_approved">{{"pre_approved" | translate}}</h3>
+                                <!-- <h3 class="inside">{{"inside" | translate}}</h3> -->
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/avatars/img4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Maid | Emili Williamson
+                                </h2>
+                                <!-- <h3 class="pre_approved">{{"pre_approved" | translate}}</h3> -->
+                                <h3 class="inside">{{"inside" | translate}}</h3>
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/service/service2.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Appliances Repair
+                                </h2>
+                                <h3 class="pre_approved">{{"service_booked" | translate}}</h3>
+                                <!-- <h3 class="inside">{{"inside" | translate}}</h3> -->
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/allow/allow_cab.png" class="crop_img" style="min-height: fit-content;">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Cab | Uber 2250
+                                </h2>
+                                <h3 class="pre_approved">{{"pre_approved" | translate}}</h3>
+                                <!-- <h3 class="inside">{{"inside" | translate}}</h3> -->
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+
+
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/allow/allow_guest.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Guest | Emili Williamson
+                                </h2>
+                                <h3 class="pre_approved">{{"pre_approved" | translate}}</h3>
+                                <!-- <h3 class="inside">{{"inside" | translate}}</h3> -->
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/avatars/img4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Maid | Emili Williamson
+                                </h2>
+                                <!-- <h3 class="pre_approved">{{"pre_approved" | translate}}</h3> -->
+                                <h3 class="inside">{{"inside" | translate}}</h3>
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/service/service2.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Appliances Repair
+                                </h2>
+                                <h3 class="pre_approved">{{"service_booked" | translate}}</h3>
+                                <!-- <h3 class="inside">{{"inside" | translate}}</h3> -->
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/allow/allow_cab.png" class="crop_img" style="min-height: fit-content;">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Cab | Uber 2250
+                                </h2>
+                                <h3 class="pre_approved">{{"pre_approved" | translate}}</h3>
+                                <!-- <h3 class="inside">{{"inside" | translate}}</h3> -->
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/allow/allow_guest.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Guest | Emili Williamson
+                                </h2>
+                                <h3 class="pre_approved">{{"pre_approved" | translate}}</h3>
+                                <!-- <h3 class="inside">{{"inside" | translate}}</h3> -->
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/avatars/img4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Maid | Emili Williamson
+                                </h2>
+                                <!-- <h3 class="pre_approved">{{"pre_approved" | translate}}</h3> -->
+                                <h3 class="inside">{{"inside" | translate}}</h3>
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/service/service2.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Appliances Repair
+                                </h2>
+                                <h3 class="pre_approved">{{"service_booked" | translate}}</h3>
+                                <!-- <h3 class="inside">{{"inside" | translate}}</h3> -->
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="itemHeader d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/allow/allow_cab.png" class="crop_img" style="min-height: fit-content;">
+                            </div>
+                            <div class="text_box">
+                                <h2 class="d-flex">
+                                    Cab | Uber 2250
+                                </h2>
+                                <h3 class="pre_approved">{{"pre_approved" | translate}}</h3>
+                                <!-- <h3 class="inside">{{"inside" | translate}}</h3> -->
+
+                                <h4 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                    22 Aug | 03:30pm
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="itemFooter">
+                            <ion-row>
+                                <ion-col size="4">
+                                    <h3 class="d-flex call">
+                                        <ion-icon class="zmdi zmdi-phone"></ion-icon>
+                                        {{"call" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-delete"></ion-icon>
+                                        {{"delete" | translate}}
+                                    </h3>
+                                </ion-col>
+                                <ion-col size="4" (click)="GatePass()">
+                                    <h3 class="d-flex">
+                                        <ion-icon class="zmdi zmdi-receipt"></ion-icon>
+                                        {{"gate_pass" | translate}}
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+    </ion-slides>
+
+    <div class="moreOptions" [ngClass]="toggleClass ? 'toggleClass active' : 'toggleClass'">
+        <div class="OptionsRow">
+            <h2>{{"send_message" | translate}}</h2>
+            <ion-row>
+                <ion-col size="6" class="animate__animated animate__zoomIn">
+                    <div class="item" (click)="chat()">
+                        <div class="text_box">
+                            <h3>Admin</h3>
+                        </div>
+                        <div class="img_box">
+                            <img src="assets/images/more_options/security_admin.png" class="animate__animated animate__fadeInUp">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col size="6" class="animate__animated animate__zoomIn">
+                    <div class="item" (click)="chat()">
+                        <div class="text_box">
+                            <h3>Security</h3>
+                        </div>
+                        <div class="img_box">
+                            <img src="assets/images/more_options/security_message.png" class="animate__animated animate__fadeInUp">
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <div class="OptionsRow security_alert">
+            <h2>{{"security_alert" | translate}}</h2>
+            <ion-row>
+                <ion-col size="6" class="animate__animated animate__zoomIn">
+                    <div class="item" (click)="openMoreOptions()">
+                        <div class="text_box">
+                            <h3>Fire <br> Alert</h3>
+                        </div>
+                        <div class="img_box">
+                            <img src="assets/images/more_options/security_fire.png" class="animate__animated animate__fadeInUp">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col size="6" class="animate__animated animate__zoomIn">
+                    <div class="item" (click)="openMoreOptions()">
+                        <div class="text_box">
+                            <h3>Stuck in <br> Lift</h3>
+                        </div>
+                        <div class="img_box">
+                            <img src="assets/images/more_options/security_lift.png" class="animate__animated animate__fadeInUp">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col size="6" class="animate__animated animate__zoomIn">
+                    <div class="item" (click)="openMoreOptions()">
+                        <div class="text_box">
+                            <h3>Animal <br> Threat</h3>
+                        </div>
+                        <div class="img_box">
+                            <img src="assets/images/more_options/security_snake.png" class="animate__animated animate__fadeInUp">
+                        </div>
+                    </div>
+                </ion-col>
+
+                <ion-col size="6" class="animate__animated animate__zoomIn">
+                    <div class="item" (click)="openMoreOptions()">
+                        <div class="text_box">
+                            <h3>Visiter <br> Threat</h3>
+                        </div>
+                        <div class="img_box">
+                            <img src="assets/images/more_options/security_guestattack.png" class="animate__animated animate__fadeInUp">
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+
+
+
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="openMoreOptions()" [ngClass]="toggleClass ? 'toggleClass active' : 'toggleClass'">
+        <ion-fab-button class="animate__animated animate__zoomIn">
+            <span>+</span>
+        </ion-fab-button>
+    </ion-fab>
+
+    <div class="optionButtonBg"></div>
+</ion-content>

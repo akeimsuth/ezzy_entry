@@ -1,0 +1,69 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <ion-icon class="zmdi zmdi-close ion-text-start" (click)="dismiss()"></ion-icon>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <ion-card>
+        <ion-card-header class="d-flex">
+            <h2>{{"add" | translate}} <br> {{"daily_helps" | translate}}</h2>
+
+            <div class="profile_img end">
+                <div class="img_box center_img">
+                    <img src="assets/images/profile_placeholder.png" class="crop_img">
+                    <img src="assets/images/profile_placeholder.png" class="crop_img">
+                </div>
+                <ion-icon class="zmdi zmdi-camera"></ion-icon>
+            </div>
+        </ion-card-header>
+        <ion-card-content>
+            <div class="form">
+                <ion-list lines="none">
+                    <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                        <div class="item_inner">
+                            <div class="input_box d-flex">
+                                <ion-input type="name" value="" placeholder="{{'enter_name' | translate}}"></ion-input>
+                                <!-- <ion-icon class="zmdi zmdi-accounts-list-alt end ion-text-end"></ion-icon> -->
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                        <div class="item_inner">
+                            <div class="input_box d-flex">
+                                <ion-input type="number" value="" placeholder="{{'phone_number' | translate}}"></ion-input>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex ion-align-items-start">
+                            <ion-label mode="md" style="display:none;">{{"help_type" | translate}}</ion-label>
+                            <div class="input_box d-flex">
+                                <ion-select mode="md" placeholder="{{'help_type' | translate}}" cancelText="{{'cancel' | translate}}" okText="{{'ok' | translate}}">
+                                    <ion-select-option value="1">Made</ion-select-option>
+                                    <ion-select-option value="2">Laundryman</ion-select-option>
+                                    <ion-select-option value="3">Gardner</ion-select-option>
+                                    <ion-select-option value="4">Cook</ion-select-option>
+                                </ion-select>
+                                <ion-icon class="zmdi zmdi-caret-down  ion-text-end end"></ion-icon>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item lines="none" class="animate__animated animate__fadeInUp send_gatepass">
+                        <div class="item_inner d-flex">
+                            <ion-checkbox></ion-checkbox>
+                            &nbsp;&nbsp;&nbsp;
+                            <ion-label mode="md">{{"send_gatepass" | translate}}</ion-label>
+                        </div>
+                    </ion-item>
+
+                    <ion-button size="large" shape="block" fill="solid" mode="md" class="btn animate__animated animate__fadeInUp" (click)="submit()">{{'submit' | translate}}</ion-button>
+                </ion-list>
+            </div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

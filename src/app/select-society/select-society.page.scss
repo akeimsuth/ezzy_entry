@@ -1,0 +1,31 @@
+.form {
+    padding-top: 30px;
+    ion-list {
+        ion-item {
+            .item_inner {
+                .input_box {
+                    ion-searchbar {
+                        --border-radius: 0;
+                        --box-shadow: none;
+                        --placeholder-color: var(--text-light2);
+                        --placeholder-opacity: 1;
+                        font-size: 1rem !important;
+                        font-weight: 500 !important;
+                        --placeholder-font-weight: 500;
+                    }
+                    ion-icon {
+                        &.zmdi-search {
+                            color: var(--text-light);
+                            font-size: 1.5rem;
+                            min-width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+ion-footer {
+    padding: 20px 20px 30px 20px;
+}

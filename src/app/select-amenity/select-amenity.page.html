@@ -1,0 +1,66 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+    <div class="header_text">
+        <h1 class="animate__animated animate__fadeInUp d-flex">
+            {{"select_amenity" | translate}}
+        </h1>
+    </div>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <ion-list lines="none">
+        <ion-item class="animate__animated animate__fadeInUp" (click)="bookAmenity()">
+            <div class="item_inner d-flex">
+                <h3>Community Hall</h3>
+                <h4 class="end paid"> {{"paid" | translate}}</h4>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" (click)="bookAmenity()">
+            <div class="item_inner d-flex">
+                <h3>Swiming Pool</h3>
+                <h4 class="end paid"> {{"paid" | translate}}</h4>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" (click)="bookAmenity()">
+            <div class="item_inner d-flex">
+                <h3>Common Plot</h3>
+                <h4 class="end free"> {{"free" | translate}}</h4>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" (click)="bookAmenity()">
+            <div class="item_inner d-flex">
+                <h3>Club house</h3>
+                <h4 class="end free"> {{"free" | translate}}</h4>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" (click)="bookAmenity()">
+            <div class="item_inner d-flex">
+                <h3>Guest house</h3>
+                <h4 class="end paid"> {{"paid" | translate}}</h4>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" (click)="bookAmenity()">
+            <div class="item_inner d-flex">
+                <h3>Tennis Room</h3>
+                <h4 class="end free"> {{"free" | translate}}</h4>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" (click)="bookAmenity()">
+            <div class="item_inner d-flex">
+                <h3>Indoor Theather</h3>
+                <h4 class="end paid"> {{"paid" | translate}}</h4>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" (click)="bookAmenity()">
+            <div class="item_inner d-flex">
+                <h3>Roof Lounge Areas</h3>
+                <h4 class="end paid"> {{"paid" | translate}}</h4>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

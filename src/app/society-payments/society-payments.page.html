@@ -1,0 +1,264 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+    <div class="header_text">
+        <h1 class="animate__animated animate__fadeInUp d-flex">
+            {{"payments" | translate}}
+            <ion-icon class="zmdi zmdi-filter-list end ion-text-end"></ion-icon>
+        </h1>
+    </div>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <ion-list lines="none">
+        <ion-item class="animate__animated animate__fadeInUp" (click)="paymentReceipt()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex"> Maintenance Jun'22</h2>
+                        <h3>$20.00</h3>
+                    </div>
+                    <div class="status end paid">
+                        <h4>{{"paid" | translate}}</h4>
+                    </div>
+                </div>
+
+                <div class="itemContent d-flex">
+                    <h3>
+                        <span>{{"paid_on" | translate}}</span>
+                        <strong>03 June, 03:30 pm</strong>
+                    </h3>
+                    <h4 class="end">
+                        <ion-icon class="zmdi zmdi-receipt ion-text-start"></ion-icon>
+                        {{"receipt" | translate}}
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="paymentMethods()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex">Security Deposite</h2>
+                        <h3>$50.00</h3>
+                    </div>
+                    <div class="status end pending">
+                        <h4>{{"pending" | translate}}</h4>
+                    </div>
+                </div>
+                <div class="itemContent d-flex">
+                    <h3>
+                        <span>{{"due_date" | translate}}</span>
+                        <strong>22 June, 02:58pm</strong>
+                    </h3>
+                    <h4 class="end pay_now">
+                        <ion-icon class="zmdi  zmdi-money-box ion-text-start"></ion-icon>
+                        {{"pay_now" | translate}}
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="paymentMethods()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex">Society Welfare fund</h2>
+                        <h3>$50.00</h3>
+                    </div>
+                    <div class="status end failed">
+                        <h4>{{"failed" | translate}}</h4>
+                    </div>
+                </div>
+                <div class="itemContent d-flex">
+                    <h3>
+                        <span>{{"due_date" | translate}}</span>
+                        <strong>28 May, 02:58pm</strong>
+                    </h3>
+                    <h4 class="end pay_now">
+                        <ion-icon class="zmdi  zmdi-money-box ion-text-start"></ion-icon>
+                        {{"pay_now" | translate}}
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="paymentReceipt()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex"> Maintenance May'22</h2>
+                        <h3>$20.00</h3>
+                    </div>
+                    <div class="status end paid">
+                        <h4>{{"paid" | translate}}</h4>
+                    </div>
+                </div>
+
+                <div class="itemContent d-flex">
+                    <h3>
+                        <span>{{"paid_on" | translate}}</span>
+                        <strong>03 June, 03:30 pm</strong>
+                    </h3>
+                    <h4 class="end">
+                        <ion-icon class="zmdi zmdi-receipt ion-text-start"></ion-icon>
+                        {{"receipt" | translate}}
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="paymentReceipt()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex"> Maintenance Apr'22</h2>
+                        <h3>$20.00</h3>
+                    </div>
+                    <div class="status end paid">
+                        <h4>{{"paid" | translate}}</h4>
+                    </div>
+                </div>
+
+                <div class="itemContent d-flex">
+                    <h3>
+                        <span>{{"paid_on" | translate}}</span>
+                        <strong>03 June, 03:30 pm</strong>
+                    </h3>
+                    <h4 class="end">
+                        <ion-icon class="zmdi zmdi-receipt ion-text-start"></ion-icon>
+                        {{"receipt" | translate}}
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" (click)="paymentReceipt()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex"> Maintenance Jun'22</h2>
+                        <h3>$20.00</h3>
+                    </div>
+                    <div class="status end paid">
+                        <h4>{{"paid" | translate}}</h4>
+                    </div>
+                </div>
+
+                <div class="itemContent d-flex">
+                    <h3>
+                        <span>{{"paid_on" | translate}}</span>
+                        <strong>03 June, 03:30 pm</strong>
+                    </h3>
+                    <h4 class="end">
+                        <ion-icon class="zmdi zmdi-receipt ion-text-start"></ion-icon>
+                        {{"receipt" | translate}}
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="paymentMethods()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex">Security Deposite</h2>
+                        <h3>$50.00</h3>
+                    </div>
+                    <div class="status end pending">
+                        <h4>{{"pending" | translate}}</h4>
+                    </div>
+                </div>
+                <div class="itemContent d-flex">
+                    <h3>
+                        <span>{{"due_date" | translate}}</span>
+                        <strong>22 June, 02:58pm</strong>
+                    </h3>
+                    <h4 class="end pay_now">
+                        <ion-icon class="zmdi  zmdi-money-box ion-text-start"></ion-icon>
+                        {{"pay_now" | translate}}
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="paymentMethods()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex">Society Welfare fund</h2>
+                        <h3>$50.00</h3>
+                    </div>
+                    <div class="status end failed">
+                        <h4>{{"failed" | translate}}</h4>
+                    </div>
+                </div>
+                <div class="itemContent d-flex">
+                    <h3>
+                        <span>{{"due_date" | translate}}</span>
+                        <strong>28 May, 02:58pm</strong>
+                    </h3>
+                    <h4 class="end pay_now">
+                        <ion-icon class="zmdi  zmdi-money-box ion-text-start"></ion-icon>
+                        {{"pay_now" | translate}}
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="paymentReceipt()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex"> Maintenance May'22</h2>
+                        <h3>$20.00</h3>
+                    </div>
+                    <div class="status end paid">
+                        <h4>{{"paid" | translate}}</h4>
+                    </div>
+                </div>
+
+                <div class="itemContent d-flex">
+                    <h3>
+                        <span>{{"paid_on" | translate}}</span>
+                        <strong>03 June, 03:30 pm</strong>
+                    </h3>
+                    <h4 class="end">
+                        <ion-icon class="zmdi zmdi-receipt ion-text-start"></ion-icon>
+                        {{"receipt" | translate}}
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="paymentReceipt()">
+            <div class="item_inner">
+                <div class="itemHeader d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex"> Maintenance Apr'22</h2>
+                        <h3>$20.00</h3>
+                    </div>
+                    <div class="status end paid">
+                        <h4>{{"paid" | translate}}</h4>
+                    </div>
+                </div>
+
+                <div class="itemContent d-flex">
+                    <h3>
+                        <span>{{"paid_on" | translate}}</span>
+                        <strong>03 June, 03:30 pm</strong>
+                    </h3>
+                    <h4 class="end">
+                        <ion-icon class="zmdi zmdi-receipt ion-text-start"></ion-icon>
+                        {{"receipt" | translate}}
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+
+</ion-content>
