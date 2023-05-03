@@ -168,6 +168,9 @@
               "browserTarget": "app:build:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
